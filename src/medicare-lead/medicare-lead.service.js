@@ -21,7 +21,7 @@ const MedicareService = {
       console.log('statusCode', response.data.statusCode)
       return response.data.body
     } catch (error) {
-      console.log('MedicareService error on ping api')
+      console.log('MedicareService error on ping api', JSON.stringify(error))
       throw error
     }
   },
@@ -52,7 +52,7 @@ const MedicareService = {
       console.log('statusCode', response.data.statusCode)
       return response.data.body
     } catch (error) {
-      console.log('MedicareService error on POST api')
+      console.log('MedicareService error on POST api', JSON.stringify(error))
       throw error
     }
   },

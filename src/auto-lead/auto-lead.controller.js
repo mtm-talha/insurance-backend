@@ -16,7 +16,7 @@ const AutoLeadController = {
       return res.send(pingResult)
     } catch (error) {
       const result = JSON.parse(JSON.stringify(error))
-      return res.status(result.status).send(result.message)
+      return res.status(result.status).send(result)
     }
   },
 }

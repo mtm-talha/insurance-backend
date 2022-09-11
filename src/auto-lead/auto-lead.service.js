@@ -22,7 +22,7 @@ const AutoLeadService = {
       console.log('statusCode', response.data.statusCode)
       return response.data.body
     } catch (error) {
-      console.log('AutoLeadService error on ping api')
+      console.log('AutoLeadService error on ping api', JSON.stringify(error))
       throw error
     }
   },
@@ -53,7 +53,7 @@ const AutoLeadService = {
       console.log('statusCode', response.data.statusCode)
       return response.data.body
     } catch (error) {
-      console.log('AutoLeadService error on POST api')
+      console.log('AutoLeadService error on POST api', JSON.stringify(error))
       throw error
     }
   },
