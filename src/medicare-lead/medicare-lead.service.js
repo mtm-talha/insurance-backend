@@ -23,20 +23,12 @@ const MedicareService = {
       throw response
     }
   },
-  sendPostApi: async (body, pingId) => {
-    const payload = {
-      ...body,
-      metaData: {
-        ...body.metaData,
-        pingId,
-      },
-    }
-
+  sendPostApi: async (body) => {
     const options = {
       method: 'POST',
       url: `${config.dataPass.medicare_lead_post_url}?quadTag=${config.quadTag}`,
       headers: config.dataPass.headers,
-      body: JSON.stringify(payload),
+      body: JSON.stringify(body),
     }
     const { error, response, data } = await requestUrl(options)
     if (!error && response.statusCode == 200) {

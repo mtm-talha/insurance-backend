@@ -1,19 +1,21 @@
 const autoLeadService = require('./auto-lead.service')
 
 const AutoLeadController = {
-  sendApi: async (req, res) => {
+  sendPingApi: async (req, res) => {
     try {
       const pingResult = await autoLeadService.sendPingApi(req.body)
       console.log('AutoLeadController pingResult', pingResult)
-      //   if (pingResult.status === 'SUCCESS') {
-      //     const postResult = await autoLeadService.sendPostApi(
-      //       req.body,
-      //       pingResult.pingId,
-      //     )
-      //     console.log('AutoLeadController pingResult', postResult)
-      //     return res.send(postResult)
-      //   }
       return res.send(pingResult)
+    } catch (error) {
+      const result = JSON.parse(JSON.stringify(error))
+      return res.status(result.statusCode).send(result)
+    }
+  },
+  sendPostApi: async (req, res) => {
+    try {
+      const postResult = await autoLeadService.sendPostApi(req.body)
+      console.log('AutoLeadController postResult', postResult)
+      return res.send(postResult)
     } catch (error) {
       const result = JSON.parse(JSON.stringify(error))
       return res.status(result.statusCode).send(result)

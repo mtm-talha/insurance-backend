@@ -8,5 +8,6 @@ router.get('/', function (req, res) {
   })
 })
 
-router.post('/sendApi', medicareController.sendApi)
+router.post('/sendPingApi', medicareController.sendPingApi)
+router.post('/sendPostApi', medicareController.sendPostApi)
 module.exports = router

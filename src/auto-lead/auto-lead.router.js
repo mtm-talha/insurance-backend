@@ -8,6 +8,7 @@ router.get('/', function (req, res) {
   })
 })
 
-router.post('/sendApi', autoLeadController.sendApi)
+router.post('/sendPingApi', autoLeadController.sendPingApi)
+router.post('/sendPostApi', autoLeadController.sendPostApi)
 
 module.exports = router
