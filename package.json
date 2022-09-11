@@ -1,54 +1,53 @@
 {
-    "name": "backend",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "start": "nodemon index.js",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "prettier-format": " prettier --write src//**/*.{js,json}",
-        "prettier-check": " prettier --check src//**/*.{js,json}",
-        "eslint-fix": "eslint --fix '/*.js'",
-        "commit": "cz",
-        "prepare": "husky install"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "app-root-path": "^3.0.0",
-        "axios": "^0.27.2",
-        "body-parser": "^1.20.0",
-        "cors": "^2.8.5",
-        "dotenv": "^8.6.0",
-        "express": "^4.17.1",
-        "http-proxy-middleware": "^2.0.6",
-        "moment": "^2.27.0",
-        "request": "^2.88.2"
-    },
-    "devDependencies": {
-        "commitizen": "^4.2.2",
-        "cz-conventional-changelog-emoji": "0.1.0",
-        "eslint": "^8.18.0",
-        "eslint-config-prettier": "^8.5.0",
-        "eslint-plugin-prettier": "^4.2.1",
-        "eslint-plugin-spellcheck": "^0.0.19",
-        "husky": "^6.0.0",
-        "lint-staged": "^13.0.3",
-        "nodemon": "^2.0.4",
-        "prettier": "2.7.1"
-    },
-    "lint-staged": {
-        "*.{js,json,md}": [
-            "prettier --write"
-        ],
-        "*.{js}": [
-            "eslint --cache --fix"
-        ]
-    },
-    "config": {
-        "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog-emoji"
-        }
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier-format": " prettier --write src//**/*.{js,json}",
+    "prettier-check": " prettier --check src//**/*.{js,json}",
+    "eslint-fix": "eslint --fix '/*.js'",
+    "commit": "cz",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.6.0",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^2.0.6",
+    "moment": "^2.27.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "commitizen": "^4.2.2",
+    "cz-conventional-changelog-emoji": "0.1.0",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-spellcheck": "^0.0.19",
+    "husky": "^6.0.0",
+    "lint-staged": "^13.0.3",
+    "nodemon": "^2.0.4",
+    "prettier": "2.7.1"
+  },
+  "lint-staged": {
+    "*.{js,json,md}": [
+      "prettier --write"
+    ],
+    "*.{js}": [
+      "eslint --cache --fix"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog-emoji"
     }
+  }
 }

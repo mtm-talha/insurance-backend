@@ -16,7 +16,7 @@ const MedicareController = {
       return res.send(pingResult)
     } catch (error) {
       const result = JSON.parse(JSON.stringify(error))
-      return res.status(result.status).send(result)
+      return res.status(result.statusCode).send(result)
     }
   },
 }
