@@ -11,7 +11,9 @@ const MedicareService = {
     try {
       const response = await axios.post(
         options.url,
-        options.headers,
+        {
+          headers: options.headers,
+        },
         options.body,
       )
       console.log('MedicareService ping successfully api called')
@@ -40,7 +42,9 @@ const MedicareService = {
     try {
       const response = await axios.post(
         options.url,
-        options.headers,
+        {
+          headers: options.headers,
+        },
         options.body,
       )
       console.log('MedicareService POST successfully api called')

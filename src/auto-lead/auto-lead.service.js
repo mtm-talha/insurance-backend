@@ -12,7 +12,9 @@ const AutoLeadService = {
     try {
       const response = await axios.post(
         options.url,
-        options.headers,
+        {
+          headers: options.headers,
+        },
         options.body,
       )
       console.log('AutoLeadService ping successfully api called')
@@ -41,7 +43,9 @@ const AutoLeadService = {
     try {
       const response = await axios.post(
         options.url,
-        options.headers,
+        {
+          headers: options.headers,
+        },
         options.body,
       )
       console.log('AutoLeadService POST successfully api called')
