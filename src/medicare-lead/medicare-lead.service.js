@@ -6,7 +6,7 @@ const MedicareService = {
   sendPingApi: async (body) => {
     const options = {
       method: 'POST',
-      url: `${config.dataPass.medicare_lead_ping_url}?quadTag=${config.quadTag}`,
+      url: `${config.dataPass.medicare_lead_ping_url}?quadTag=${config.medicare_quadTag}`,
       headers: config.dataPass.headers,
       body: JSON.stringify(body),
     }
@@ -26,7 +26,7 @@ const MedicareService = {
   sendPostApi: async (body) => {
     const options = {
       method: 'POST',
-      url: `${config.dataPass.medicare_lead_post_url}?quadTag=${config.quadTag}`,
+      url: `${config.dataPass.medicare_lead_post_url}?quadTag=${config.medicare_quadTag}`,
       headers: config.dataPass.headers,
       body: JSON.stringify(body),
     }

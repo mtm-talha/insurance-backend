@@ -5,7 +5,7 @@ const AutoLeadService = {
   sendPingApi: async (body) => {
     const options = {
       method: 'POST',
-      url: `${config.dataPass.auto_lead_ping_url}?quadTag=${config.quadTag}`,
+      url: `${config.dataPass.auto_lead_ping_url}?quadTag=${config.auto_lead_quadTag}`,
       headers: config.dataPass.headers,
       body: JSON.stringify(body),
     }
@@ -25,7 +25,7 @@ const AutoLeadService = {
   sendPostApi: async (body) => {
     const options = {
       method: 'POST',
-      url: `${config.dataPass.auto_lead_post_url}?quadTag=${config.quadTag}`,
+      url: `${config.dataPass.auto_lead_post_url}?quadTag=${config.auto_lead_quadTag}`,
       headers: config.dataPass.headers,
       body: JSON.stringify(body),
     }
